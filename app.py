@@ -19,8 +19,9 @@ def info():
     except Exception:
         cpu_model = platform.processor() or "Unknown"
 
+    host_name = os.getenv('NODE_HOSTNAME', socket.gethostname())
     text = (
-        f"Node: {socket.gethostname()}\n"
+        f"Node: {host_name}\n"
         f"Platform: {platform.platform()}\n"
         f"CPU model: {cpu_model}\n"
         f"CPU cores: {psutil.cpu_count(logical=False)}\n"
@@ -28,7 +29,7 @@ def info():
         f"Memory total: {round(vm.total / 1e9, 2)} GB\n"
         f"Memory used: {round(vm.used / 1e9, 2)} GB ({vm.percent}%)\n"
         f"Uptime: {str(uptime).split('.')[0]}\n"
-        f"Container hostname: {os.getenv('HOSTNAME')}\n"
+        f"Container hostname: {host_name}\n"
     )
 
     return Response(text, mimetype="text/plain")
