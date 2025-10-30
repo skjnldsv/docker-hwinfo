@@ -49,9 +49,11 @@ services:
 
     networks: 
       - proxy
-
     ports:
       - 8080
+     
+    environment:
+      NODE_HOSTNAME: "{{.Node.Hostname}}"
 
     healthcheck:
       test: ["CMD", "curl", "-f", "http://127.0.0.1:8080"]
