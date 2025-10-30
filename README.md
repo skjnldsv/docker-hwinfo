@@ -64,11 +64,11 @@ services:
 
       labels:
         traefik.enable: "true"
-        traefik.http.routers.whoami.rule: Host(`hwinfo.domain.com`)
-        traefik.http.routers.whoami.entrypoints: websecure
-        traefik.http.routers.whoami.tls.certresolver: letsencryptresolver
+        traefik.http.routers.hwinfo.rule: Host(`hwinfo.domain.com`)
+        traefik.http.routers.hwinfo.entrypoints: websecure
+        traefik.http.routers.hwinfo.tls.certresolver: letsencryptresolver
         # fake value https://github.com/containous/traefik/issues/5732
-        traefik.http.services.whoami.loadbalancer.server.port: 8080
+        traefik.http.services.hwinfo.loadbalancer.server.port: 8080
 
 networks:
   proxy:
