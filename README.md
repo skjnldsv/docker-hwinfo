@@ -1,7 +1,7 @@
 # Node Info
 
 A lightweight Python web service that displays basic hardware and system info for the host node.  
-Useful for Docker Swarm clusters — run in `global` mode to see per-node details behind Traefik or directly via port access.
+Useful for Docker Swarm clusters: run in `global` mode to see per-node details behind Traefik or directly via port access.
 
 ## Features
 
