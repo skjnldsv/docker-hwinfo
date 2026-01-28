@@ -8,6 +8,7 @@ Useful for Docker Swarm clusters: run in `global` mode to see per-node details b
 - Plain text output (no HTML)
 - CPU model, core and thread count
 - Total and used memory
+- Memory brand, model and speed 
 - Uptime
 - Hostname and container ID
 - Minimal footprint (~50 MB image)
